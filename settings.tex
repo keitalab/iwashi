@@ -1,0 +1,37 @@
+\usepackage[utf8]{inputenc}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[top=25.4truemm,bottom=25.4truemm,left=25.4truemm,right=25.4truemm]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\setstretch{1.5}
+
+\titleformat{\section}{\normalfont\fontsize{24pt}{48pt}\mdseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{16pt}{32pt}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{16pt}{32pt}\bfseries}{\thesubsubsection}{1em}{}
+
+\renewcommand{\thesection}{第 \arabic{section} 章}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+
+\let\oldtableofcontents\tableofcontents
+\renewcommand\tableofcontents{\clearpage\oldtableofcontents}
+
+\setcounter{tocdepth}{3}
+
+\def\tightlist{\itemsep1pt\parskip0pt\parsep0pt}
